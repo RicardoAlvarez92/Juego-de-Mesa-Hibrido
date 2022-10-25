@@ -6,50 +6,186 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./prueba.css">
     <link rel="stylesheet" href="./normalize.css">
 </head>
 <body>
     <main id="contenedor_principal">
 
-        <div id="contenedor_heroe">
+        <section id="contenedor_heroe">
 
             <div id="contenedor_heroe_armas">
-                <div id="imagen_heroe">Heroe</div>
-                <div id="imagen_arma" class="equipoHeroe">Arma</div>
-                <div id="imagen_escudo" class="equipoHeroe">Escudo</div>
-                <div id="imagen_equipo_1" class="equipoHeroe">Item</div>
-                <div id="imagen_equipo_2" class="equipoHeroe">Item</div>
-            </div>
-
-            <div id="contenedor_heroe_estadisticas">
-                <div id="barra_salud">Vida</div>
-                <div id="contenedor_estadisticas">
-                    <div id="contenedor_estadisticas_columna_1">
-                        <div id="barra_fuerza" class="barraEstadistica"> Fuerza</div>
-                        <div id="barra_magia" class="barraEstadistica"> Magia</div>
-                        <div id="barra_defensa" class="barraEstadistica">Defensa</div>
-                    </div>
-                    <div id="contenedor_estadisticas_columna_2">
-                        <div id="barra_agilidad" class="barraEstadistica">Agilidad</div>
-                        <div id="barra_destreza" class="barraEstadistica">Destreza</div>
-                        <div id="barra_critico" class="barraEstadistica">Critico</div>
-                    </div>
+                <div id="imagen_heroe">
+                    <img src="./src/img/arquero3.png" alt="">
+                </div>
+                <div id="imagen_arma" class="equipoHeroe">
+                    <img src="./src/img/arco.jfif" alt="">
+                </div>
+                <div id="imagen_escudo" class="equipoHeroe">
+                    <img src="./src/img/escudo.jfif" alt="">
+                </div>
+                <div id="imagen_equipo_1" class="equipoHeroe">
+                    <img src="./src/img/armadura.jfif" alt="">
+                </div>
+                <div id="imagen_equipo_2" class="equipoHeroe">
+                    <img src="./src/img/anillo.jfif" alt="">
                 </div>
             </div>
-            
-        </div>
 
-        <div id="contenedor_enemigos_aliados">
-            <h5>Enemigos</h5>
-            <div id="cartas_enemigos">
-                <div class="cartaEnemigo">Carta Enemigo</div>
-                <div class="cartaEnemigo">Carta Enemigo</div>
-                <div class="cartaEnemigo">Carta Enemigo</div>
+            <div id="contenedor_vida">
+                <div id="barra_vida">
+                    <div id="fondo_rojo_vida">
+
+                    </div>
+                </div>
+                <div id="conteo_vida">
+                    <h3>10 / 15</h3>
+                </div>
+            </div>           
+        </section>
+
+        <section id="contenedor_heroe_estadisticas">  
+                <div id="contenedor_estadisticas">
+                    <div id="contenedor_estadisticas_columna_1">
+                        <div class="barraEstadistica">
+                            <img src="src/img/fuerza.png" alt="">
+                            <div id="barra_fuerza">
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                            </div>
+                        </div>
+                        <div class="barraEstadistica">
+                            <img src="src/img/magia.png" alt="">
+                            <div id="barra_magia">
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                            </div>
+                        </div>
+                        <div class="barraEstadistica">
+                            <img src="src/img/defensa.png" alt="">
+                            <div id="barra_defensa" >
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="contenedor_estadisticas_columna_2">
+                        <div class="barraEstadistica">
+                            <img src="src/img/agilidad.png" alt="">
+                            <div id="barra_agilidad">
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                            </div>
+                        </div>
+                        <div class="barraEstadistica"><img src="src/img/destreza2.png" alt="">
+                            <div id="barra_destreza">
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                            </div></div>
+                        <div class="barraEstadistica"><img src="src/img/critico.png" alt="">
+                            <div id="barra_critico">
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                                <div class="puntoEstadistica"></div>
+                            </div></div>
+                    </div>
+                </div>
+
+            <div id="contenedor_enemigos_aliados">
+                <div id="botones_menu"></div>
+                
+                <!-- cartas -->
+                <div id="tarjetas_enemigos">
+                    <input type="radio" name="slider" class="d-none" id="s1" checked>
+                    <input type="radio" name="slider" class="d-none" id="s2">
+                    <input type="radio" name="slider" class="d-none" id="s3">
+                
+                    <div class="tarjetas">
+                
+                        <label for="s1" id="slide1">
+                        <div class="tarjeta">
+                            <div class="imagen">
+                            <img src="src/img/fondoBosque.jpg" alt="">
+                            </div>
+                        </div>
+                        </label>
+                
+                        <label for="s2" id="slide2">
+                        <div class="tarjeta">
+                            <div class="imagen">
+                            <img src="src/img/fondo-2.jpg" alt="">
+                            </div>
+                            
+                        </div>
+                        </label>
+                
+                        <label for="s3" id="slide3">
+                        <div class="tarjeta">
+                            <div class="imagen">
+                            <img src="src/img/fondobarras.jfif" alt="">
+                            </div>
+                        </div>
+                        </label>
+                
+                    </div>
+                
+                    </div>
+
+                    <!-- cartas -->
             </div>
-
-        </div>
+            
+        </section>
+        
     </main>
-    
-    
+
+
+        
 </body>
 </html>

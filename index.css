@@ -1,37 +1,51 @@
 body{
     text-align: center;
+    background-color: black;
 }
 #contenedor_principal{
     width: 100vw;
     height: 100vh;
-    background: blue;
-  
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
 }
 #contenedor_heroe{
     width: 100%;
-    height: 70%;   
-    background-color: black;
+    height: 50%;   
+    background: url(./src/img/mapacuadro.png)no-repeat center;
+    background-size: cover;
 }
 #contenedor_heroe_armas{
     width: 100%;
-    height: 75%;
-    background: cyan;
+    height: 85%;
+    /* background: cyan; */
     position: relative;
     display: flex;
 }
-
 #imagen_heroe{
-    width: 50%;
+    width: 100%;
     height: 90%;
-    background-color: orange;
     margin: auto auto;
-
 }
+#imagen_heroe img{
+        max-height: 100%;
+        height: auto;
+        width: auto;
+}
+.equipoHeroe img{
+    max-height: 100%;
+    height: auto;
+    width: auto;
+}
+
 .equipoHeroe{
     width: 25%;
-    height: 35%;
-    background-color: blueviolet;
+    height: 43%;
+    /* background-color: blueviolet; */
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #imagen_arma{
     top: 15px;
@@ -48,32 +62,58 @@ body{
 #imagen_equipo_2{
     bottom: 15px;
     right: 15px;
+}
 
+#contenedor_vida{
+    width: 90%;
+    height: 15%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#barra_vida{
+    width: 100%;
+    height: 18%;
+    background: rgb(139, 135, 135);
+    border: 3px solid #7d5f05;
+    border-radius: 12px;
+}
+#fondo_rojo_vida{
+    width: 66%;
+    height: 100%;
+    border-radius: 10px;
+    background: #c00000;  
+}
+#conteo_vida{
+    width: 30%;
+    height: 35%;
+    border: 1px solid #7d5f05;
+    background: url(./src/img/fondobarras.jfif) no-repeat center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #contenedor_heroe_estadisticas{
     width: 100%;
-    height: 25%;
-    background: red;
+    height: 50%;
+    background:url(./src/img/fondobarras.jfif) no-repeat center;
+    background-size: cover;
 }
 
-#barra_salud{
-    width: 90%;
-    height: 20%;
-    background-color: green;
-    margin: 0 auto;
-}
 #contenedor_estadisticas{
     width: 100%;
-    height: 80%;
-    background: brown;
+    height: 35%;
     display: flex;
 }
 #contenedor_estadisticas_columna_1,
 #contenedor_estadisticas_columna_2{
     width: 50%;
     height: 100%;
-    background: white;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -83,40 +123,115 @@ body{
 .barraEstadistica{
     width: 90%;
     height: 25%;
-    background: yellow;
+    border: 3px solid #7d5f05;
+   background: url(./src/img/fondobarras.jfif) no-repeat center;
+   background-size: cover;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 12px
+}
+.barraEstadistica img{
+    width: 12%;
+    max-width: 30px;
+}
+#barra_fuerza,
+#barra_agilidad,
+#barra_destreza,
+#barra_magia,
+#barra_defensa,
+#barra_critico{
+    width:90%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.puntoEstadistica{
+    width: 11px;
+    height: 11px;
+    border: 1px solid;
+}
+.prueba{
+    width: 11px;
+    height: 11px;
 }
 
 #contenedor_enemigos_aliados{
     width: 100%;
-    height: 30%;
+    height: 65%;
     background: gray;
     display: flex;
     flex-direction: column;
     align-items: center;
-   /*  margin-top: -22px; */
 }
 
-#contenedor_enemigos_aliados h5{
-    width: 80%;
-    height: 15%;
-    background: violet;
-}
-#cartas_enemigos{
+#botones_menu{
     width: 100%;
-    height: 85%;
-    display: flex;
-    justify-content: space-evenly;
-}
-.cartaEnemigo{
-    width: 25%;
-    height: 90%;
-    background: purple;
+    height: 10%;
+    background: #c00000;
 }
 
-/* <div id="contenedor_enemigos_aliados">
-            <h5>Enemigos</h5>
-            <div id="cartas_enemigos">
-                <div class="cartaEnemigo">Carta Enemigo</div>
-                <div class="cartaEnemigo">Carta Enemigo</div>
-                <div class="cartaEnemigo">Carta Enemigo</div>
-            </div> */
+
+
+
+
+
+
+     
+@media only screen and (min-width: 500px){
+    #contenedor_principal{
+        width: 80vw;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 700px){
+    #contenedor_principal{
+        width: 60vw;
+        margin: 0 auto;
+    }
+}
+/*
+@media (min-width: 1000px){
+    #contenedor_principal{
+        width: 45vw;
+        margin: 0 auto;
+    }
+} */
+
+
+@media only screen and (max-height: 500px){
+    #contenedor_principal{
+        width: 100vw;
+        display: flex;
+    }
+    
+#contenedor_heroe{
+    width: 50%;
+    height: 100%;   
+}
+#contenedor_heroe_estadisticas{
+    width: 50%;
+    height: 100%;
+}
+  }
+
+  @media only screen and (min-width: 1100px) {
+    #contenedor_principal{
+        display: flex;
+    }
+    
+#contenedor_heroe{
+    width: 50%;
+    height: 100%;   
+}
+#contenedor_heroe_estadisticas{
+    width: 50%;
+    height: 100%;
+}
+  }
+
+
+
+
+
+
