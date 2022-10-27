@@ -80,6 +80,7 @@ body{
     border: 3px solid black;
     margin-top: -2px;
     position: relative;
+    
 }
 
 .barra-vida .barra-hp{
@@ -90,12 +91,12 @@ body{
 }
 
 .barra-vida .contador-vida{
-    width: 14%;
+    width: 30%;
     height: 90%;
     color: white;
     position: absolute;
     top: 5%;
-    left: 43%;
+    left: 35%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -269,9 +270,17 @@ input {
     height: 100%;
     background: url(./src/img/origen/Ecenario\ bosque\ 1.png) no-repeat bottom;
     background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
 }
 
-
+.enemigo-imagen img{
+    height: 60%;
+    position: absolute;
+    bottom: 35px;
+}
 
 #s1:checked~.contenedor-tarjetas-enemigos #slide2,
 #s2:checked~.contenedor-tarjetas-enemigos #slide3,
