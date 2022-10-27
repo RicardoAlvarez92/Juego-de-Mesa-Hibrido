@@ -239,7 +239,7 @@ input {
     position: relative;
     width: 100%;
     height: 100%;
-    background-color: #323444;
+    background-color: green;
     border-radius: 10px;
     overflow: hidden;
 }
@@ -247,7 +247,6 @@ input {
 .tarjeta-enemigo .fila-superior{
     width: 100%;
     height: 70%;
-    background-color: #c0000c;
     display: flex;
 
 }
@@ -258,11 +257,39 @@ input {
     background-color: aqua;
 }
 
-.fila-superior .enemigo-ataque-dist,
+.fila-superior .enemigo-ataque-dist{
+    width: 15%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.enemigo-ataque-dist h2{
+    margin: 0;
+}
+
 .fila-superior .enemigo-vida-def-eva{
     width: 15%;
     height: 100%;
-    background-color:red;
+}
+.enemigo-vida-def-eva div{
+    width: 100%;
+    height: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.enemigo-vida-def-eva div h2{
+    margin: 0%;
+}
+
+.contenedor-evasion h2{
+    position: absolute;
+    bottom: 0;
 }
 
 .fila-superior .enemigo-imagen{
@@ -275,12 +302,44 @@ input {
     justify-content: center;
 
 }
-
 .enemigo-imagen img{
     height: 60%;
     position: absolute;
     bottom: 35px;
 }
+
+.fila-inferior .nombre-enemigo{
+    width: 100%;    
+    height: 30%;
+    margin: 0;
+    text-align: center;
+    background-color: red;
+  
+}
+.fila-inferior .contenedor-movimiento-acciones{
+    width: 100%;
+    height: 70%;
+    display: flex;
+}
+
+.contenedor-movimiento-acciones .movimiento{
+    width: 20%;
+    height: 100%;
+    margin: 0;
+    font-size: 30px;
+    background-color: #7d5f05;
+    font-weight: bold;
+    text-align: center;
+}
+.contenedor-movimiento-acciones .acciones{
+    background-color: aliceblue;
+    width: 80%;
+    height: 100%;
+    font-size: 12px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
 
 #s1:checked~.contenedor-tarjetas-enemigos #slide2,
 #s2:checked~.contenedor-tarjetas-enemigos #slide3,
