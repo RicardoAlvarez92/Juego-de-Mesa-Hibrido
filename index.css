@@ -1,237 +1,342 @@
+/* --- tarjeta con imagen de items y heroe + barra de vida */
 body{
-    text-align: center;
-    background-color: black;
+    /* background-color: #c0000c; */
 }
-#contenedor_principal{
+.contenedor-general{
     width: 100vw;
     height: 100vh;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center; */
+    overflow: hidden;
+  /*   max-width: 414px;
+    max-height: 760px;    */
 }
-#contenedor_heroe{
+.contenedor-personaje{
     width: 100%;
-    height: 50%;   
-    background: url(./src/img/mapacuadro.png)no-repeat center;
+    height: 51%;
+    background: url(./src/img/Imagenes/fondo\ personaje.jpg) no-repeat center;
     background-size: cover;
+    overflow: hidden;
 }
-#contenedor_heroe_armas{
-    width: 100%;
-    height: 85%;
-    /* background: cyan; */
-    position: relative;
-    display: flex;
-}
-#imagen_heroe{
+
+
+.contenedor-personaje-kit{
     width: 100%;
     height: 90%;
-    margin: auto auto;
-}
-#imagen_heroe img{
-        max-height: 100%;
-        height: auto;
-        width: auto;
-}
-.equipoHeroe img{
-    max-height: 100%;
-    height: auto;
-    width: auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
 }
 
-.equipoHeroe{
-    width: 25%;
-    height: 43%;
-    /* background-color: blueviolet; */
+.contenedor-personaje-kit .columna-items-izquierda,
+.contenedor-personaje-kit .columna-items-derecha{
+    width: 33%;
+    height: 100%;
+    display: flex;
+    flex-direction: flex;
+    align-items: center;
+    justify-content: space-evenly;
     position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#imagen_arma{
-    top: 15px;
-    left: 15px;
-}
-#imagen_escudo{
-    right: 15px;
-    top: 15px;
-}
-#imagen_equipo_1{
-    bottom: 15px;
-    left: 15px;
-}
-#imagen_equipo_2{
-    bottom: 15px;
-    right: 15px;
+    flex-wrap: wrap;
 }
 
-#contenedor_vida{
-    width: 90%;
-    height: 15%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
+.contenedor-personaje-kit .columna-items-derecha{
+    right: 0;
 }
 
-#barra_vida{
-    width: 100%;
-    height: 18%;
-    background: rgb(139, 135, 135);
-    border: 3px solid #7d5f05;
-    border-radius: 12px;
+.contenedor-personaje-kit .columna-items-izquierda{
+    left: 0;
 }
-#fondo_rojo_vida{
-    width: 66%;
+
+.columna-items-izquierda img,
+.columna-items-derecha img{
+    height: 45%;
+}
+
+.contenedor-personaje-kit .columna-imagen-personaje{
+    width: 34%;
     height: 100%;
-    border-radius: 10px;
-    background: #c00000;  
-}
-#conteo_vida{
-    width: 30%;
-    height: 35%;
-    border: 1px solid #7d5f05;
-    background: url(./src/img/fondobarras.jfif) no-repeat center;
-    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#contenedor_heroe_estadisticas{
-    width: 100%;
-    height: 50%;
-    background:url(./src/img/fondobarras.jfif) no-repeat center;
-    background-size: cover;
+.columna-imagen-personaje img{
+    height: 98%;
 }
 
-#contenedor_estadisticas{
-    width: 100%;
-    height: 35%;
-    display: flex;
-}
-#contenedor_estadisticas_columna_1,
-#contenedor_estadisticas_columna_2{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.barraEstadistica{
-    width: 90%;
-    height: 25%;
-    border: 3px solid #7d5f05;
-   background: url(./src/img/fondobarras.jfif) no-repeat center;
-   background-size: cover;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    font-size: 12px
-}
-.barraEstadistica img{
-    width: 12%;
-    max-width: 30px;
-}
-#barra_fuerza,
-#barra_agilidad,
-#barra_destreza,
-#barra_magia,
-#barra_defensa,
-#barra_critico{
-    width:90%;
-    display: flex;
-    justify-content: space-evenly;
-}
-.puntoEstadistica{
-    width: 11px;
-    height: 11px;
-    border: 1px solid;
-}
-.prueba{
-    width: 11px;
-    height: 11px;
-}
-
-#contenedor_enemigos_aliados{
-    width: 100%;
-    height: 65%;
-    background: gray;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#botones_menu{
+/* barras de vida */
+.contenedor-personaje-vida{
     width: 100%;
     height: 10%;
-    background: #c00000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-personaje-vida .barra-vida{
+    width: 90%;
+    height: 50%;
+    background-color: gray;
+    border-radius: 10px;
+    border: 3px solid black;
+    margin-top: -2px;
+    position: relative;
+}
+
+.barra-vida .barra-hp{
+    width: 66%;
+    height: 100%;
+    border-radius: 7px; 
+    background-color: #c0000c;
+}
+
+.barra-vida .contador-vida{
+    width: 14%;
+    height: 90%;
+    color: white;
+    position: absolute;
+    top: 5%;
+    left: 43%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+/* --- estadistcas personaje parte media --- */
+.contenedor-estadisticas{
+    width: 100%;
+    height: 12%;
+    background: url(./src/img/fondobarras.jfif) no-repeat top;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.contenedor-estadisticas .contenedor-estadisticas-columna-izquierda,
+.contenedor-estadisticas .contenedor-estadisticas-columna-derecha{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contenedor-estadisticas-columna-derecha .contenedor-estadistica, 
+.contenedor-estadisticas-columna-izquierda .contenedor-estadistica{
+    width: 95%;
+    height: 28%;
+    background: url(./src/img/fondoEstadistica.jpg) no-repeat center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #000;
+}
+
+.contenedor-estadistica .nombre-estadistica,
+.contenedor-estadistica .nombre-estadistica{
+    width: 35%;
+    height: 40%;
+    background: #7d5f05;
+    /* clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%); */
+    font-size: 13PX;
+    align-self: flex-start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+.contenedor-estadistica .contenedor-puntos,
+.contenedor-estadistica .contenedor-puntos{
+    width: 100%;
+    height: 60%; 
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contenedor-puntos .punto-estadistica-vacio{
+    width: 11px;
+    height: 11px;
+    background-color: black;
+}
+.contenedor-puntos .punto-estadistica-lleno{
+    width: 11px;
+    height: 11px;
+    background-color: #c0000c;
+}
+
+/* --- menu pestañas jugabilidad --- */
+.contenedor-pendiente{
+    width: 100%;
+    height: 37%;
+    /* background-color: rgb(0, 0, 0, 70%); */
+    background: url(./src/img/fondobarras.jfif) no-repeat center;
+    background-size: cover;
+}
+
+.contenedor-pendiente .contenedor-botones-menu{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+.contenedor-botones-menu .btn-menu{
+    width: 25%;
+    height: 100%;
+    background-color: #7d5f05;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-pendiente .contenedor-vistas-menu{
+    margin: 0 auto;
+    width: 100%;
+    height: 85%;
+    display: flex;
+    transform-style: preserve-3d;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+input {
+    display: none;
+}
+
+.contenedor-vistas-menu .contenedor-tarjetas-enemigos{ 
+    position: relative;
+    width: 100%;
+    height: 100%;
+    perspective: 300px;
+    transform-style: preserve-3d;
+    display: flex;
+    align-items: center;
+}
+
+.contenedor-tarjetas-enemigos label{
+    position: absolute;
+    width: 40%;
+    height: 90%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+    transition: transform 0.55s ease;
+}
+
+.contenedor-tarjetas-enemigos .tarjeta-enemigo{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #323444;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tarjeta-enemigo .fila-superior{
+    width: 100%;
+    height: 70%;
+    background-color: #c0000c;
+    display: flex;
+
+}
+
+.tarjeta-enemigo .fila-inferior{
+    width: 100%;
+    height: 30%;
+    background-color: aqua;
+}
+
+.fila-superior .enemigo-ataque-dist,
+.fila-superior .enemigo-vida-def-eva{
+    width: 15%;
+    height: 100%;
+    background-color:red;
+}
+
+.fila-superior .enemigo-imagen{
+    width: 70%;
+    height: 100%;
+    background: url(./src/img/origen/Ecenario\ bosque\ 1.png) no-repeat bottom;
+    background-size: cover;
 }
 
 
 
-
-
-
-
-     
-@media only screen and (min-width: 500px){
-    #contenedor_principal{
-        width: 80vw;
-        margin: 0 auto;
-    }
+#s1:checked~.contenedor-tarjetas-enemigos #slide2,
+#s2:checked~.contenedor-tarjetas-enemigos #slide3,
+#s3:checked~.contenedor-tarjetas-enemigos #slide1{
+   /*  box-shadow: 0 15px 35px 0 rgba(0, 0, 0, 45%); */
+    transform: translate3d(-150%, 0, -220px);
 }
 
+#s1:checked~.contenedor-tarjetas-enemigos #slide3,
+#s2:checked~.contenedor-tarjetas-enemigos #slide1,
+#s3:checked~.contenedor-tarjetas-enemigos #slide2{
+    /* box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 45%); */
+    transform: translate3d(150%, 0, -220px);
+}
+
+#s1:checked~.contenedor-tarjetas-enemigos #slide1,
+#s2:checked~.contenedor-tarjetas-enemigos #slide2,
+#s3:checked~.contenedor-tarjetas-enemigos #slide3{
+    /* box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 50%); */
+    transform: translate3d(0, 0, 0);
+}
+/* 
 @media only screen and (min-width: 700px){
-    #contenedor_principal{
-        width: 60vw;
-        margin: 0 auto;
-    }
-}
-/*
-@media (min-width: 1000px){
-    #contenedor_principal{
-        width: 45vw;
-        margin: 0 auto;
-    }
-} */
-
-
-@media only screen and (max-height: 500px){
-    #contenedor_principal{
-        width: 100vw;
+    .contenedor-general{
         display: flex;
+        max-width: 100%;
+
+    }
+    .contenedor-personaje{
+        width: 40%;
+        height: 100%;
     }
     
-#contenedor_heroe{
-    width: 50%;
-    height: 100%;   
-}
-#contenedor_heroe_estadisticas{
-    width: 50%;
-    height: 100%;
-}
-  }
-
-  @media only screen and (min-width: 1100px) {
-    #contenedor_principal{
-        display: flex;
-    }
+    .columna-items-izquierda img,
+    .columna-items-derecha img{
+        height: 35%;
+        max-width: 90%;
     
-#contenedor_heroe{
-    width: 50%;
-    height: 100%;   
+    }
+
+    .contenedor-pendiente{
+        width: 60%;
+        height: 100%;
+    } 
 }
-#contenedor_heroe_estadisticas{
-    width: 50%;
-    height: 100%;
+ */
+ /* 
+@media screen and (max-height: 550px) {
+    .contenedor-general{
+        display: flex;
+        max-width: 100%;
+    }
+    .contenedor-personaje{
+        width: 40%;
+        height: 100%;
+    }
+
+    .columna-items-izquierda{
+
+    }
+    .contenedor-pendiente{
+        width: 60%;
+        height: 100%;
+    }
+
+    
 }
-  }
-
-
-
-
-
-
+ */

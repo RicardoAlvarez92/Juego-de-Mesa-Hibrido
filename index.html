@@ -4,188 +4,209 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="./index.css">
-    <link rel="stylesheet" href="./prueba.css">
     <link rel="stylesheet" href="./normalize.css">
+    <title>Document</title>
 </head>
 <body>
-    <main id="contenedor_principal">
+    <main class="contenedor-general">
+        <section class="contenedor-personaje">
 
-        <section id="contenedor_heroe">
+            <div class="contenedor-personaje-kit ">
 
-            <div id="contenedor_heroe_armas">
-                <div id="imagen_heroe">
-                    <img src="./src/img/arquero3.png" alt="">
+                <div class="columna-items-izquierda">
+                    <img src="src/img/arco.jfif" alt="">
+                    <img src="src/img/armadura.jfif" alt="">
                 </div>
-                <div id="imagen_arma" class="equipoHeroe">
-                    <img src="./src/img/arco.jfif" alt="">
+
+                <div class="columna-imagen-personaje">
+                    <img src="src/img/arquero3.png" alt="">
                 </div>
-                <div id="imagen_escudo" class="equipoHeroe">
-                    <img src="./src/img/escudo.jfif" alt="">
+
+                <div class="columna-items-derecha">    
+                    <img src="src/img/escudo.jfif" alt="">
+                    <img src="src/img/anillo.jfif" alt="">
                 </div>
-                <div id="imagen_equipo_1" class="equipoHeroe">
-                    <img src="./src/img/armadura.jfif" alt="">
-                </div>
-                <div id="imagen_equipo_2" class="equipoHeroe">
-                    <img src="./src/img/anillo.jfif" alt="">
+
+            </div>
+
+            <div class="contenedor-personaje-vida">
+                <div class="barra-vida">
+                    <div class="barra-hp"></div>
+                    <h4 class="contador-vida">10 / 15</h4>
                 </div>
             </div>
 
-            <div id="contenedor_vida">
-                <div id="barra_vida">
-                    <div id="fondo_rojo_vida">
-
-                    </div>
-                </div>
-                <div id="conteo_vida">
-                    <h3>10 / 15</h3>
-                </div>
-            </div>           
         </section>
 
-        <section id="contenedor_heroe_estadisticas">  
-                <div id="contenedor_estadisticas">
-                    <div id="contenedor_estadisticas_columna_1">
-                        <div class="barraEstadistica">
-                            <img src="src/img/fuerza.png" alt="">
-                            <div id="barra_fuerza">
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                            </div>
-                        </div>
-                        <div class="barraEstadistica">
-                            <img src="src/img/magia.png" alt="">
-                            <div id="barra_magia">
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                            </div>
-                        </div>
-                        <div class="barraEstadistica">
-                            <img src="src/img/defensa.png" alt="">
-                            <div id="barra_defensa" >
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                            </div>
+        <section class="contenedor-estadisticas">
+
+                <div class="contenedor-estadisticas-columna-izquierda">
+    
+                    <div class="contenedor-estadistica">
+                        <div class="nombre-estadistica">Fuerza</div>
+                        <div class="contenedor-puntos">
+                            <div class="punto-estadistica-lleno"></div>
+                            <div class="punto-estadistica-lleno"></div>
+                            <div class="punto-estadistica-lleno"></div>
+                            <div class="punto-estadistica-lleno"></div>
+                            <div class="punto-estadistica-lleno"></div>
+                            <div class="punto-estadistica-vacio"></div>
+                            <div class="punto-estadistica-vacio"></div>
+                            <div class="punto-estadistica-vacio"></div>
+                            <div class="punto-estadistica-vacio"></div>
+                            <div class="punto-estadistica-vacio"></div>
                         </div>
                     </div>
-                    <div id="contenedor_estadisticas_columna_2">
-                        <div class="barraEstadistica">
-                            <img src="src/img/agilidad.png" alt="">
-                            <div id="barra_agilidad">
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                            </div>
+    
+                    <div class="contenedor-estadistica">
+                        <div class="nombre-estadistica">Magia</div>
+                        <div class="contenedor-puntos">
+                            <div class="punto-estadistica-lleno"></div>
+                            <div class="punto-estadistica-lleno"></div>
+                            <div class="punto-estadistica-lleno"></div>
+                            <div class="punto-estadistica-lleno"></div>
+                            <div class="punto-estadistica-lleno"></div>
+                            <div class="punto-estadistica-vacio"></div>
+                            <div class="punto-estadistica-vacio"></div>
+                            <div class="punto-estadistica-vacio"></div>
+                            <div class="punto-estadistica-vacio"></div>
+                            <div class="punto-estadistica-vacio"></div>
                         </div>
-                        <div class="barraEstadistica"><img src="src/img/destreza2.png" alt="">
-                            <div id="barra_destreza">
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                            </div></div>
-                        <div class="barraEstadistica"><img src="src/img/critico.png" alt="">
-                            <div id="barra_critico">
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                                <div class="puntoEstadistica"></div>
-                            </div></div>
+                    </div>
+    
+                    <div class="contenedor-estadistica">
+                        <div class="nombre-estadistica">Destreza</div>
+                        <div class="contenedor-puntos">
+                            <div class="punto-estadistica-lleno"></div>
+                            <div class="punto-estadistica-lleno"></div>
+                            <div class="punto-estadistica-lleno"></div>
+                            <div class="punto-estadistica-vacio"></div>
+                            <div class="punto-estadistica-vacio"></div>
+                            <div class="punto-estadistica-vacio"></div>
+                            <div class="punto-estadistica-vacio"></div>
+                            <div class="punto-estadistica-vacio"></div>
+                            <div class="punto-estadistica-vacio"></div>
+                            <div class="punto-estadistica-vacio"></div>
+                        </div>
                     </div>
                 </div>
-
-            <div id="contenedor_enemigos_aliados">
-                <div id="botones_menu"></div>
-                
-                <!-- cartas -->
-                <div id="tarjetas_enemigos">
-                    <input type="radio" name="slider" class="d-none" id="s1" checked>
-                    <input type="radio" name="slider" class="d-none" id="s2">
-                    <input type="radio" name="slider" class="d-none" id="s3">
-                
-                    <div class="tarjetas">
-                
-                        <label for="s1" id="slide1">
-                        <div class="tarjeta">
-                            <div class="imagen">
-                            <img src="src/img/fondoBosque.jpg" alt="">
-                            </div>
+    
+                <div class="contenedor-estadisticas-columna-derecha">
+                    
+                    <div class="contenedor-estadistica">
+                        <div class="nombre-estadistica">Agilidad</div>
+                        <div class="contenedor-puntos">
+                            <div class="punto-estadistica-lleno"></div>
+                            <div class="punto-estadistica-lleno"></div>
+                            <div class="punto-estadistica-lleno"></div>
+                            <div class="punto-estadistica-lleno"></div>
+                            <div class="punto-estadistica-lleno"></div>
+                            <div class="punto-estadistica-lleno"></div>
+                            <div class="punto-estadistica-lleno"></div>
+                            <div class="punto-estadistica-vacio"></div>
+                            <div class="punto-estadistica-vacio"></div>
+                            <div class="punto-estadistica-vacio"></div>
                         </div>
-                        </label>
-                
-                        <label for="s2" id="slide2">
-                        <div class="tarjeta">
-                            <div class="imagen">
-                            <img src="src/img/fondo-2.jpg" alt="">
-                            </div>
-                            
-                        </div>
-                        </label>
-                
-                        <label for="s3" id="slide3">
-                        <div class="tarjeta">
-                            <div class="imagen">
-                            <img src="src/img/fondobarras.jfif" alt="">
-                            </div>
-                        </div>
-                        </label>
-                
                     </div>
-                
+                    <div class="contenedor-estadistica">
+                        <div class="nombre-estadistica">Defensa</div>
+                        <div class="contenedor-puntos">
+                            <div class="punto-estadistica-lleno"></div>
+                            <div class="punto-estadistica-lleno"></div>
+                            <div class="punto-estadistica-lleno"></div>
+                            <div class="punto-estadistica-lleno"></div>
+                            <div class="punto-estadistica-lleno"></div>
+                            <div class="punto-estadistica-lleno"></div>
+                            <div class="punto-estadistica-vacio"></div>
+                            <div class="punto-estadistica-vacio"></div>
+                            <div class="punto-estadistica-vacio"></div>
+                            <div class="punto-estadistica-vacio"></div>
+                        </div>
                     </div>
+                    <div class="contenedor-estadistica">
+                        <div class="nombre-estadistica">Critico</div>
+                        <div class="contenedor-puntos">
+                            <div class="punto-estadistica-lleno"></div>
+                            <div class="punto-estadistica-lleno"></div>
+                            <div class="punto-estadistica-lleno"></div>
+                            <div class="punto-estadistica-vacio"></div>
+                            <div class="punto-estadistica-vacio"></div>
+                            <div class="punto-estadistica-vacio"></div>
+                            <div class="punto-estadistica-vacio"></div>
+                            <div class="punto-estadistica-vacio"></div>
+                            <div class="punto-estadistica-vacio"></div>
+                            <div class="punto-estadistica-vacio"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </section>
 
-                    <!-- cartas -->
-            </div>
+        <section class="contenedor-pendiente">
             
+            <div class="contenedor-botones-menu">
+                <div class="btn-menu btn-enemigos">Enemigos</div>
+                <div class="btn-menu btn-aliados">Aliados</div>
+                <div class="btn-menu btn-dados">Items</div>
+                <div class="btn-menu btn-bolsa">Dados</div>
+            </div>
+
+            <div class="contenedor-vistas-menu">
+                <input type="radio" name="slider" class="d-none" id="s1" checked>
+                <input type="radio" name="slider" class="d-none" id="s2">
+                <input type="radio" name="slider" class="d-none" id="s3">
+                
+                <div class="contenedor-tarjetas-enemigos">
+            
+                    <label for="s1" id="slide1">
+
+                        <div class="tarjeta-enemigo">
+
+                            <div class="fila-superior">
+                                <div class="enemigo-ataque-dist"></div>
+                                <div class="enemigo-imagen">
+                                    <img src="./src/img/origen/lobo.png" alt="">
+                                </div>
+                                <div class="enemigo-vida-def-eva"></div>
+                            </div>
+                            <div class="fila-inferior">
+
+                            </div>
+
+                            
+                    
+                        </div>
+                    </label>
+
+                    <label for="s2" id="slide2">
+
+                        <div class="tarjeta-enemigo">
+
+                            
+                    
+                        </div>
+
+                      
+                    </label>
+
+                    <label for="s3" id="slide3">
+
+                        <div class="tarjeta-enemigo">
+                            
+
+                        
+                        </div>
+
+                      
+                    </label>
+            
+                </div>
+            </div>
+
         </section>
-        
     </main>
-
-
-        
+    
 </body>
 </html>
